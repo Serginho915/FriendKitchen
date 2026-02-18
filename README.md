@@ -37,7 +37,6 @@ A stylish application for managing menu items and creating beautiful, printable 
    ```bash
    npm install
    ```
-   *Note: Ensure you also install dependencies in the `FriendKitchen` and `backend` folders if they are not automatically handled.*
 
 ## 🏁 Running the Project
 

@@ -1,0 +1,14 @@
+{
+  "name": "friendkitchen-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev:all",
+    "dev:frontend": "npm run dev --prefix FriendKitchen",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:all": "concurrently \"npm run dev --prefix FriendKitchen\" \"npm run dev --prefix backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

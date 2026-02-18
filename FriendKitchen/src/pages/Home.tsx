@@ -1,0 +1,108 @@
+import { useState, useEffect } from 'react'
+import styles from './Home/Home.module.scss';
+import DishCard from '../components/DishCard/DishCard';
+import MenuModal from '../components/MenuModal/MenuModal';
+
+type Product = {
+    id: number | string;
+    name: string;
+    weight: number;
+    price: number;
+    category?: string;
+};
+
+const Home = () => {
+    const [menuItems, setMenuItems] = useState<Product[]>([])
+    const [selectedIds, setSelectedIds] = useState<Set<number | string>>(new Set())
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const AVAILABLE_CATEGORIES = [
+        'САЛАТИ',
+        'СТУДЕНИ ЯСТИЯ / РАЗЯДКИ',
+        'СУПИ',
+        'ОСНОВНИ ЯСТИЯ',
+        'МЕСО И РИБА',
+        'ГАРНИТУРИ',
+        'ДЕСЕРТИ'
+    ];
+
+    const fetchMenu = () => {
+        return fetch('http://localhost:3000/api/menu')
+            .then(res => res.json())
+            .then(data => setMenuItems(data))
+            .catch(err => console.error('Error fetching menu:', err));
+    };
+
+    useEffect(() => {
+        fetchMenu();
+    }, []);
+
+    const toggleSelection = (id: number | string) => {
+        setSelectedIds(prev => {
+            const next = new Set(prev);
+            if (next.has(id)) {
+                next.delete(id);
+            } else {
+                next.add(id);
+            }
+            return next;
+        });
+    };
+
+    const selectedItems = menuItems.filter(item => selectedIds.has(item.id));
+
+    // Grouping logic for the main view
+    const groupedItems = menuItems.reduce((acc, item) => {
+        const category = item.category || 'Другое';
+        if (!acc[category]) acc[category] = [];
+        acc[category].push(item);
+        return acc;
+    }, {} as Record<string, Product[]>);
+
+    const categories = Object.keys(groupedItems).sort((a, b) => {
+        const indexA = AVAILABLE_CATEGORIES.indexOf(a);
+        const indexB = AVAILABLE_CATEGORIES.indexOf(b);
+        if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+        if (indexA !== -1) return -1;
+        if (indexB !== -1) return 1;
+        return a.localeCompare(b);
+    });
+
+    return (
+        <div className={styles.homeContainer}>
+            <div className={styles.controls}>
+                <button
+                    className={styles.templateBtn}
+                    onClick={() => setIsModalOpen(true)}
+                    disabled={selectedIds.size === 0}
+                >
+                    Сформировать шаблон ({selectedIds.size})
+                </button>
+            </div>
+
+            {categories.map(category => (
+                <section key={category} className={styles.categorySection}>
+                    <h3 className={styles.categoryTitle}>{category}</h3>
+                    <div className={styles.dishGrid}>
+                        {groupedItems[category].map(item => (
+                            <DishCard
+                                key={item.id}
+                                item={item}
+                                isSelected={selectedIds.has(item.id)}
+                                onToggle={toggleSelection}
+                            />
+                        ))}
+                    </div>
+                </section>
+            ))}
+
+            <MenuModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                selectedItems={selectedItems}
+            />
+        </div>
+    );
+};
+
+export default Home;

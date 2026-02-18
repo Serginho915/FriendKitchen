@@ -1,0 +1,520 @@
+
+> friendkitchen-backend@1.0.0 dev
+> nodemon src/server.js
+
+[33m[nodemon] 3.1.11[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): src/**/*[39m
+[33m[nodemon] watching extensions: js,json[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+🚀 Сервер запущен на http://localhost:3000
+📊 API доступен на http://localhost:3000/api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+POST /api/menu
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+DELETE /api/menu/58
+Deleting item with ID: 58
+Rows modified: 1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+PUT /api/menu/1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+PUT /api/menu/1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+PUT /api/menu/1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+PUT /api/menu/1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+PUT /api/menu/1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+GET /api/menu
+PUT /api/menu/1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+PUT /api/menu/1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+GET /api/menu
+PUT /api/menu/1
+GET /api/menu
+GET /api/menu
+PUT /api/menu/1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+GET /api/menu
+DELETE /api/menu/1
+Deleting item with ID: 1
+Rows modified: 1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+POST /api/menu
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+PUT /api/menu/59
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+PUT /api/menu/59
+Database saved to /Users/serhiikozhyn/FriendKitche[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+node:events:498
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+node:events:498
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+node:events:498
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+node:events:498
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+🚀 Сервер запущен на http://localhost:3000
+📊 API доступен на http://localhost:3000/api/menu
+GET /api/menu
+GET /api/menu
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+node:events:498
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+node:events:498
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+Сервер запущен на http://localhost:3000
+API доступен на http://localhost:3000/api/menu
+GET /api/menu
+GET /api/menu
+POST /api/menu
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+DELETE /api/menu/65
+Deleting item with ID: 65
+Rows modified: 1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+node:events:498
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+Сервер запущен на http://localhost:3000
+API доступен на http://localhost:3000/api/menu
+GET /api/menu
+GET /api/menu
+PUT /api/menu/68
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:703:11)
+    at ServerResponse.header (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:278:15)
+    at updateItem (file:///Users/serhiikozhyn/FriendKitchen/backend/src/controllers/menu.controller.js:69:23)
+    at Layer.handle [as handle_request] (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/index.js:284:15
+GET /api/menu
+DELETE /api/menu/68
+Deleting item with ID: 68
+Rows modified: 1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+POST /api/menu
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+DELETE /api/menu/69
+Deleting item with ID: 69
+Rows modified: 1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+PUT /api/menu/66
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:703:11)
+    at ServerResponse.header (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:278:15)
+    at updateItem (file:///Users/serhiikozhyn/FriendKitchen/backend/src/controllers/menu.controller.js:69:23)
+    at Layer.handle [as handle_request] (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/index.js:284:15
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+t file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+re sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:703:11)
+    at ServerResponse.header (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:278:15)
+    at updateItem (file:///Users/serhiikozhyn/FriendKitchen/backend/src/controllers/menu.controller.js:69:23)
+    at Layer.handle [as handle_request] (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/index.js:284:15
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+POST /api/menu
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+PUT /api/menu/67
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:703:11)
+    at ServerResponse.header (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:278:15)
+    at updateItem (file:///Users/serhiikozhyn/FriendKitchen/backend/src/controllers/menu.controller.js:69:23)
+    at Layer.handle [as handle_request] (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/index.js:284:15
+GET /api/menu
+DELETE /api/menu/67
+Deleting item with ID: 67
+Rows modified: 1
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+POST /api/menu
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+GET /api/menu
+PUT /api/menu/68
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:703:11)
+    at ServerResponse.header (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:174:12)
+    at ServerResponse.json (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/response.js:278:15)
+    at updateItem (file:///Users/serhiikozhyn/FriendKitchen/backend/src/controllers/menu.controller.js:69:23)
+    at Layer.handle [as handle_request] (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/serhiikozhyn/FriendKitchen/backend/node_module[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Database saved to /Users/serhiikozhyn/FriendKitchen/backend/database.db
+✅ База данных инициализирована
+node:events:498
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (/Users/serhiikozhyn/FriendKitchen/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+node_modules/express/lib/application.js:635:24)
+    at file:///Users/serhiikozhyn/FriendKitchen/backend/src/server.js:45:7
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.2.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m

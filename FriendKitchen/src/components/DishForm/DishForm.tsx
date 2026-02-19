@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './DishForm.module.scss';
+import { menuApi } from '../../api/menuApi';
 
 interface DishFormProps {
     onDishAdded: () => void;
@@ -30,25 +31,13 @@ const DishForm: React.FC<DishFormProps> = ({ onDishAdded, availableCategories })
             return;
         }
 
-        const itemData = {
-            name: dishName,
-            weight: weight,
-            price: price,
-            category: dishCategory
-        };
-
         try {
-            const response = await fetch('http://localhost:3000/api/menu', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(itemData),
+            await menuApi.create({
+                name: dishName,
+                weight: weight,
+                price: price,
+                category: dishCategory
             });
-
-            if (!response.ok) {
-                throw new Error('Failed to add item');
-            }
 
             // Notify parent to refresh list
             onDishAdded();
@@ -63,6 +52,7 @@ const DishForm: React.FC<DishFormProps> = ({ onDishAdded, availableCategories })
             alert('Ошибка при добавлении блюда');
         }
     };
+    ;
 
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === 'Enter') {

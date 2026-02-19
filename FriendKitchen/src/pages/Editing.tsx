@@ -1,14 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import DishForm from '../components/DishForm/DishForm';
 import MenuList from '../components/MenuList/MenuList';
-
-type Product = {
-  id: number | string;
-  name: string;
-  weight: number;
-  price: number;
-  category?: string;
-};
+import { menuApi } from '../api/menuApi';
+import type { Product } from '../api/menuApi';
 
 export const Editing = () => {
   const AVAILABLE_CATEGORIES = [
@@ -27,15 +21,34 @@ export const Editing = () => {
   const [editingId, setEditingId] = useState<number | string | null>(null)
   const [editFormData, setEditFormData] = useState<Product | null>(null)
 
-  const fetchMenu = () => {
-    return fetch('http://localhost:3000/api/menu')
-      .then(res => res.json())
-      .then(data => setMenuItems(data))
-      .catch(err => console.error('Error fetching menu:', err));
-  };
+  const fetchMenu = useCallback(async () => {
+    try {
+      const data = await menuApi.getAll();
+      setMenuItems(data);
+    } catch (err) {
+      console.error('Error fetching menu:', err);
+    }
+  }, []);
 
   useEffect(() => {
-    fetchMenu();
+    let ignore = false;
+
+    const loadData = async () => {
+      try {
+        const data = await menuApi.getAll();
+        if (!ignore) {
+          setMenuItems(data);
+        }
+      } catch (err) {
+        console.error('Error fetching menu:', err);
+      }
+    };
+
+    loadData();
+
+    return () => {
+      ignore = true;
+    };
   }, []);
 
   // Начало редактирования (inline)
@@ -58,19 +71,14 @@ export const Editing = () => {
     try {
       const { id, name, weight, price, category } = editFormData;
 
-      const response = await fetch(`http://localhost:3000/api/menu/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, weight: Number(weight), price: Number(price), category }),
+      await menuApi.update(id, {
+        name,
+        weight: Number(weight),
+        price: Number(price),
+        category
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to update item');
-      }
-
-      await fetchMenu(); // Перезагружаем список
+      await fetchMenu(); 
 
       setEditingId(null);
       setEditFormData(null);
@@ -89,14 +97,7 @@ export const Editing = () => {
   // Удаление блюда
   const handleDeleteItem = async (id: number | string) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/menu/${id}`, {
-        method: 'DELETE',
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to delete item');
-      }
-
+      await menuApi.delete(id);
       await fetchMenu();
 
       if (editingId === id) {

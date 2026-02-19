@@ -2,8 +2,15 @@ import { useState, useEffect } from 'react'
 import styles from './Home/Home.module.scss';
 import DishCard from '../components/DishCard/DishCard';
 import MenuModal from '../components/MenuModal/MenuModal';
-import { menuApi } from '../api/menuApi';
-import type { Product } from '../api/menuApi';
+import { API_BASE } from '../config/api';
+
+type Product = {
+    id: number | string;
+    name: string;
+    weight: number;
+    price: number;
+    category?: string;
+};
 
 const Home = () => {
     const [menuItems, setMenuItems] = useState<Product[]>([])
@@ -19,6 +26,13 @@ const Home = () => {
         'ГАРНИТУРИ',
         'ДЕСЕРТИ'
     ];
+
+    const fetchMenu = () => {
+        return fetch(`${API_BASE}/menu`)
+            .then(res => res.json())
+            .then(data => setMenuItems(data))
+            .catch(err => console.error('Error fetching menu:', err));
+    };
 
     useEffect(() => {
         let ignore = false;

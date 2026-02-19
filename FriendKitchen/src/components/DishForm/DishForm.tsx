@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './DishForm.module.scss';
-import { menuApi } from '../../api/menuApi';
+import { API_BASE } from '../../config/api';
 
 interface DishFormProps {
     onDishAdded: () => void;
@@ -32,11 +32,12 @@ const DishForm: React.FC<DishFormProps> = ({ onDishAdded, availableCategories })
         }
 
         try {
-            await menuApi.create({
-                name: dishName,
-                weight: weight,
-                price: price,
-                category: dishCategory
+            const response = await fetch(`${API_BASE}/menu`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(itemData),
             });
 
             // Notify parent to refresh list

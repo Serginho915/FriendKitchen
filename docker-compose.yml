@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_PATH: /data/database.db
+    volumes:
+      - ./backend:/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./FriendKitchen
+      dockerfile: Dockerfile
+      args:
+        VITE_BASE_PATH: /kitchen/
+    ports:
+      - "8003:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from './Home/Home.module.scss';
 import DishCard from '../components/DishCard/DishCard';
 import MenuModal from '../components/MenuModal/MenuModal';
+import { API_BASE } from '../config/api';
 
 type Product = {
     id: number | string;
@@ -27,7 +28,7 @@ const Home = () => {
     ];
 
     const fetchMenu = () => {
-        return fetch('/api/menu')
+        return fetch(`${API_BASE}/menu`)
             .then(res => res.json())
             .then(data => setMenuItems(data))
             .catch(err => console.error('Error fetching menu:', err));

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './DishForm.module.scss';
+import { API_BASE } from '../../config/api';
 
 interface DishFormProps {
     onDishAdded: () => void;
@@ -38,7 +39,7 @@ const DishForm: React.FC<DishFormProps> = ({ onDishAdded, availableCategories })
         };
 
         try {
-            const response = await fetch('/api/menu', {
+            const response = await fetch(`${API_BASE}/menu`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import DishForm from '../components/DishForm/DishForm';
 import MenuList from '../components/MenuList/MenuList';
+import { API_BASE } from '../config/api';
 
 type Product = {
   id: number | string;
@@ -28,7 +29,7 @@ export const Editing = () => {
   const [editFormData, setEditFormData] = useState<Product | null>(null)
 
   const fetchMenu = () => {
-    return fetch('/api/menu')
+    return fetch(`${API_BASE}/menu`)
       .then(res => res.json())
       .then(data => setMenuItems(data))
       .catch(err => console.error('Error fetching menu:', err));
@@ -58,7 +59,7 @@ export const Editing = () => {
     try {
       const { id, name, weight, price, category } = editFormData;
 
-      const response = await fetch(`/api/menu/${id}`, {
+      const response = await fetch(`${API_BASE}/menu/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +90,7 @@ export const Editing = () => {
   // Удаление блюда
   const handleDeleteItem = async (id: number | string) => {
     try {
-      const response = await fetch(`/api/menu/${id}`, {
+      const response = await fetch(`${API_BASE}/menu/${id}`, {
         method: 'DELETE',
       });
 

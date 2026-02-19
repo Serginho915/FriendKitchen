@@ -15,6 +15,8 @@ services:
     build:
       context: ./FriendKitchen
       dockerfile: Dockerfile
+      args:
+        VITE_BASE_PATH: /kitchen/
     ports:
       - "8003:80"
     depends_on:

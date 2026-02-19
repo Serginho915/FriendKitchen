@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import DishForm from '../components/DishForm/DishForm';
 import MenuList from '../components/MenuList/MenuList';
 import { API_BASE } from '../config/api';
@@ -36,7 +36,24 @@ export const Editing = () => {
   };
 
   useEffect(() => {
-    fetchMenu();
+    let ignore = false;
+
+    const loadData = async () => {
+      try {
+        const data = await menuApi.getAll();
+        if (!ignore) {
+          setMenuItems(data);
+        }
+      } catch (err) {
+        console.error('Error fetching menu:', err);
+      }
+    };
+
+    loadData();
+
+    return () => {
+      ignore = true;
+    };
   }, []);
 
   // Начало редактирования (inline)
@@ -67,11 +84,7 @@ export const Editing = () => {
         body: JSON.stringify({ name, weight: Number(weight), price: Number(price), category }),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to update item');
-      }
-
-      await fetchMenu(); // Перезагружаем список
+      await fetchMenu(); 
 
       setEditingId(null);
       setEditFormData(null);

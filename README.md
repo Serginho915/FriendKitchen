@@ -37,8 +37,20 @@ A stylish application for managing menu items and creating beautiful, printable 
    ```bash
    npm install
    ```
+   *This will install dependencies for the root, frontend, and backend automatically thanks to **NPM Workspaces**.*
 
-## 🏁 Running the Project
+3. **Configure Environment Variables**:
+   The project uses environment variables for configuration. Rename the `.env.sample` files to `.env` in both the `FriendKitchen` and `backend` directories and update the values if necessary.
+
+   **Frontend (`FriendKitchen/.env`)**:
+   ```bash
+   VITE_API_BASE_URL=http://localhost:3000/api
+   ```
+
+   **Backend (`backend/.env`)**:
+   ```bash
+   PORT=3000
+   ```
 
 To start the entire application (frontend + backend) with a single command from the root:
 

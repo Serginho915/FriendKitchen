@@ -35,7 +35,24 @@ const Home = () => {
     };
 
     useEffect(() => {
-        fetchMenu();
+        let ignore = false;
+
+        const loadData = async () => {
+            try {
+                const data = await menuApi.getAll();
+                if (!ignore) {
+                    setMenuItems(data);
+                }
+            } catch (err) {
+                console.error('Error fetching menu:', err);
+            }
+        };
+
+        loadData();
+
+        return () => {
+            ignore = true;
+        };
     }, []);
 
     const toggleSelection = (id: number | string) => {

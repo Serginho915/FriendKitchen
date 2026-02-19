@@ -31,13 +31,6 @@ const DishForm: React.FC<DishFormProps> = ({ onDishAdded, availableCategories })
             return;
         }
 
-        const itemData = {
-            name: dishName,
-            weight: weight,
-            price: price,
-            category: dishCategory
-        };
-
         try {
             const response = await fetch(`${API_BASE}/menu`, {
                 method: 'POST',
@@ -46,10 +39,6 @@ const DishForm: React.FC<DishFormProps> = ({ onDishAdded, availableCategories })
                 },
                 body: JSON.stringify(itemData),
             });
-
-            if (!response.ok) {
-                throw new Error('Failed to add item');
-            }
 
             // Notify parent to refresh list
             onDishAdded();
@@ -64,6 +53,7 @@ const DishForm: React.FC<DishFormProps> = ({ onDishAdded, availableCategories })
             alert('Ошибка при добавлении блюда');
         }
     };
+    ;
 
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === 'Enter') {

@@ -38,7 +38,7 @@ const DishForm: React.FC<DishFormProps> = ({ onDishAdded, availableCategories })
         };
 
         try {
-            const response = await fetch('http://localhost:3000/api/menu', {
+            const response = await fetch('/api/menu', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

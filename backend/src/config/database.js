@@ -6,13 +6,17 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const dbPath = path.join(__dirname, '../../database.db');
+const dbPath = process.env.DB_PATH
+  ? path.resolve(process.env.DB_PATH)
+  : path.join(__dirname, '../../database.db');
 
 let db;
 
 // Инициализация базы данных
 const initDatabase = async () => {
   const SQL = await initSqlJs();
+
+  fs.mkdirSync(path.dirname(dbPath), { recursive: true });
   
   // Проверяем, существует ли файл базы данных
   if (fs.existsSync(dbPath)) {

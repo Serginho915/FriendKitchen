@@ -53,6 +53,38 @@ npm run dev
 - To start only the frontend: `npm run dev:frontend`
 - To start only the backend: `npm run dev:backend`
 
+## 🐳 Docker (Nginx + API)
+
+The project includes a ready production setup with:
+- `frontend` container: React build served by **Nginx**
+- `backend` container: Express API
+- Reverse proxy from Nginx (`/api/*`) to backend
+- Persistent backend database volume
+
+### Run with Docker Compose
+
+From the repository root:
+
+```bash
+docker compose up -d --build
+```
+
+After startup:
+- App: [http://localhost/](http://localhost/)
+- API (through Nginx): [http://localhost/api/menu](http://localhost/api/menu)
+
+### Stop containers
+
+```bash
+docker compose down
+```
+
+### Stop and remove DB volume (full reset)
+
+```bash
+docker compose down -v
+```
+
 ## ⚙️ Deployment
 
 ### Backend (Node.js)

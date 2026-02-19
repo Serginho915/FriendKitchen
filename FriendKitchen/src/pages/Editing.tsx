@@ -28,7 +28,7 @@ export const Editing = () => {
   const [editFormData, setEditFormData] = useState<Product | null>(null)
 
   const fetchMenu = () => {
-    return fetch('http://localhost:3000/api/menu')
+    return fetch('/api/menu')
       .then(res => res.json())
       .then(data => setMenuItems(data))
       .catch(err => console.error('Error fetching menu:', err));
@@ -58,7 +58,7 @@ export const Editing = () => {
     try {
       const { id, name, weight, price, category } = editFormData;
 
-      const response = await fetch(`http://localhost:3000/api/menu/${id}`, {
+      const response = await fetch(`/api/menu/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ export const Editing = () => {
   // Удаление блюда
   const handleDeleteItem = async (id: number | string) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/menu/${id}`, {
+      const response = await fetch(`/api/menu/${id}`, {
         method: 'DELETE',
       });
 

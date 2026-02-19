@@ -27,7 +27,7 @@ const Home = () => {
     ];
 
     const fetchMenu = () => {
-        return fetch('http://localhost:3000/api/menu')
+        return fetch('/api/menu')
             .then(res => res.json())
             .then(data => setMenuItems(data))
             .catch(err => console.error('Error fetching menu:', err));
